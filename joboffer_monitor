@@ -1,0 +1,6 @@
+#!/bin/bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )" 
+
+cd $SCRIPT_DIR
+./node_modules/phantomjs/bin/phantomjs app.js|grep "== " |awk '{print $2}' | xargs -n 1 ./joboffer_diffs
