@@ -15,7 +15,11 @@ var exclueParts =  {
 		$('.col-md-4').remove();
 		$('.topbar').remove();
 		$('.callbar').remove();
-	}
+	},
+    'falcon' : function(){
+        $('header').remove();
+        $('.social-c').remove();
+    }
 }
 
 var sourcesNames = Object.keys(sources);
